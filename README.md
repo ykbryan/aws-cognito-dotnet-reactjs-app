@@ -1,15 +1,24 @@
+## Command to run:
+```
+git clone https://github.com/ykbryan/aws-cognito-dotnet-reactjs-app
+cd aws-cognito-dotnet-reactjs-app
+dotnet run watch
+```
+
+## Setup reference
 dotnet new react -o my-new-app
 https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/react?view=aspnetcore-6.0&tabs=visual-studio
 
 dotnet run watch
 
+### packages to install
 dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 dotnet add package System.IdentityModel.Tokens.Jwt
 
 use postman to make api call to e.g. https://localhost:7049/weatherforecast
 it should be HTTP ERROR 401 without any auth setup
 
-Under Postman:
+## Postman 101
 Token Name: any
 Grant Type: implicit
 Callback URL: http://localhost 
@@ -27,8 +36,7 @@ click [use Token]
 
 Now go back to your usual Postman workflow and click "SEND"
 
-
-References:
+## References
 https://dev.to/packt/creating-spas-using-asp-net-core-and-react-59a0
 https://stackoverflow.com/questions/52287506/how-do-i-integrate-amazon-cognito-login-in-postman#answer-53018712
 https://github.com/lopezlucas/IDaaS-Example
